@@ -42,4 +42,21 @@ void calculateAverageCourseScore(const int scores[STUDENT][COURSE]) {
         cout << "The average score of course " << i + 1 << " is: " << average << endl;
     }
 }
+int main() {
+    int scores[STUDENT][COURSE] = {0};
+
+    for (int i = 0; i < STUDENT; i++) {
+        cout << "Enter scores for student " << char('A' + i) << ": ";
+        for (int j = 0; j < COURSE; j++) {
+            cin >> scores[i][j];
+        }
+    }
+
+    cout << endl;
+    calculateGPA(scores);
+    cout << endl;
+    calculateAverageCourseScore(scores);
+
+    return 0;
+}
 
